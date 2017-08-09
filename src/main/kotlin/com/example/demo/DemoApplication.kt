@@ -10,13 +10,6 @@ import org.springframework.web.bind.annotation.RestController
 @SpringBootApplication
 open class DemoApplication
 
-@RestController
-class HelloControler() {
-    @GetMapping("/{name}")
-    fun hello(@PathVariable(required = false) name: String) = "hello ,$name"
-}
-
-
 fun main(args: Array<String>) {
     SpringApplication.run(DemoApplication::class.java, *args)
 }
